@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora&family=Montserrat:wght@300&display=swap');
+
+$light-color: #f4f4f4;
+$text-color: grey;
+$primary-color: #60CCFF;
+$secondary-color: black;
+$hover-color: #caf1ed;
+$font-body: 'Lato', sans-serif;
+
+%display-content {
+    display: flex;
+    justify-content: center;
+}
+%align-center {
+	display: flex;
+	align-items: center;
+}
+
+html {
+	box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+.navbar {
+    display: flex;
+    background-color: $secondary-color;
+    justify-content: space-between;
+    padding: 0.8rem calc((100vw - 1200px) / 2);
+    z-index: 1;
+	border-bottom: 1px solid $hover-color;
+
+    // .logo {
+    //     max-width: 30%;
+    //     margin-left: 20px;
+    //     align-items: center;
+
+	// 	.logo:hover {
+	// 		filter: brightness(100);
+	// 		transition: all 0.5s ease;
+	// 	}
+    // }
+
+    
+    .navbar-bars {
+        opacity: 0;
+    }
+
+	.navbar-menu {
+		@extend %align-center;
+		list-style: none;
+		text-align: center;
+		margin-right: 20px;
+		
+		.nav-links {
+			color: $hover-color;
+			@extend %align-center;
+			justify-content: center;
+			text-decoration: none;
+			font-size: 1.2rem;
+			padding: 0.7rem 1.8rem;
+
+			&:hover {
+				color: $primary-color;
+				transition: all 0.5s ease;
+			}
+		}
+
+	}
+}
+
+
+.body {
+	background-image: url('../images/praguebackgroundcolor.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	margin: 0 auto;
+	position: absolute;
+	height: 88%;
+	width: 100%;
+
+	&::after {
+		content: '';
+		background-color: black;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		opacity: 0.3;
+	}
+
+	.container-home {
+		position: relative;
+		align-content: center;
+		border: none;
+		// border: solid 2px black;
+		border-radius: 10px;
+		margin: 12%;
+		height: 250px;
+		width: 75%;
+
+		&::after {
+		content: '';
+		background-color: black;
+		align-content: center;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		opacity: 0.7;
+		}
+	}
+
+	.h1 {
+		@extend %display-content;
+		top: 15%;
+		position: relative;
+		// font-family: $font-body;
+		font-size: 3rem;
+		color: $light-color;
+		z-index: 1;
+	}
+	
+	.launch {
+    	@extend %display-content;
+		margin-top: 8%;
+	}
+
+	.launch-btn {
+		padding: 18px 50px;
+		border: none;
+		outline: none;
+		border-radius: 2px;
+		background:$primary-color;
+		cursor: pointer;
+		position: relative;
+		transition: all 0.3s;
+		z-index: 1;
+	}
+
+	.launch-btn a {
+		position: relative;
+		color:$secondary-color;
+		z-index: 2;
+		text-decoration: none;
+		font-weight: bold;
+		font-size: 1.2rem;
+	}
+
+	.launch-btn:after {
+		position: absolute;
+		content: '';
+		top: 0;
+		left: 0;
+		width: 0;
+		height: 100%;
+		background: $hover-color;
+		transition: all 0.3s;
+		border-radius: 4px;
+	}
+
+	.launch-btn:hover:after {
+		width: 100%; 
+	}
+}
