@@ -1,6 +1,4 @@
 import React from 'react';
-import { faBars } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./Home.scss";
 // import archit from "../images/architlogo2.png";
 
@@ -10,7 +8,7 @@ export const Home = () => {
       <nav className="navbar">
         {/* <a href="/"><img className="logo" src={archit} alt="Logo" /></a> */}
 			<div className="navbar-bars">
-				<FontAwesomeIcon icon={faBars} />
+			
 			</div>
 				<div className="navbar-menu">
           			<a href="/about" className="nav-links">About</a>
