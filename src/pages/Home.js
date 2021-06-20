@@ -4,7 +4,8 @@ import "./Home.scss";
 
 export const Home = () => {
   return ( 
-    <div className="home">
+    <div className="home-container">
+	<section className="home-page">
       <nav className="navbar">
         {/* <a href="/"><img className="logo" src={archit} alt="Logo" /></a> */}
 			<div className="navbar-bars">
@@ -16,7 +17,7 @@ export const Home = () => {
 				</div>
   		</nav>
 			<div className="body">
-				<div className="container-home">
+				<div className="container-title">
         		<h1 className="main-title">Discover Prague's Architecture</h1>
          		<div className="launch">
             		<button className="launch-btn"><a href="/Map">Launch Map</a></button>
@@ -25,16 +26,33 @@ export const Home = () => {
 			</div>
 			<div className="about-container">
 				<div className="sub-columns">
-					<h2>Discover</h2>
+				<div className="column-text">
+					<h2 className="sub-head">Explore</h2>
 					<p>Find out where the architecture is located by launching the map.</p>
 				</div>
-				<div>
-					<h2>Architecture</h2>
+				<div className="column-text">
+					<h2 className="sub-head">Architecture</h2>
 					<p>Know the chronology of styles which backbone the city’s culture.</p>
 				</div>
-					<h2>History</h2>
+				<div className="column-text">
+					<h2 className="sub-head">History</h2>
 					<p>Learn something behind what accompanies each style and structure.</p>
+				</div>
+				</div>
 			</div>
+			</section>
+			<section className="contact-container">
+			<div className="contact-page">
+				<div>
+					<h2>ARCHIT</h2>
+					<p>If you wish to get in touch regarding updates on historical information or architecture feel free to connect by email or social media.</p>
+					<div>
+					<a href="mailto:amandacmayne@gmail.com" target="_blank" rel="noreferrer">info@archit.eu</a>
+					</div>
+					<div className="v-line"></div>
+				</div>
+			</div>
+			</section>
         </div>
      );
 }

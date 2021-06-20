@@ -24,7 +24,7 @@ $font-body: 'Lato', sans-serif, 'Montserrat', sans-serif;
     left: 0;
     min-width: 350px;
     max-width: 350px;
-    background-color: $secondary-color;
+    background-color: #141414;
     color: $light-color;
 }
 
@@ -38,10 +38,15 @@ $font-body: 'Lato', sans-serif, 'Montserrat', sans-serif;
     height: 350px;
     overflow: auto;
     // hidescroll bar
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
 }
 
 .styles__btn {
     display: flex;
+    background: #141414;
     width: 100%;
     height: 100px;
     cursor: pointer;
@@ -53,6 +58,7 @@ $font-body: 'Lato', sans-serif, 'Montserrat', sans-serif;
     display: flex;
     align-items: center;
     justify-content: center;
+    color: #898989;
 }
 
 .style_btn_img_wrapper {
@@ -80,7 +86,7 @@ $font-body: 'Lato', sans-serif, 'Montserrat', sans-serif;
 }
 
 .style_name {
-    background-color: black;
+    background-color: #141414;
     padding: 15px;
 }
 
