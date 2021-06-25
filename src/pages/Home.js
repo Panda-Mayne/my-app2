@@ -7,13 +7,14 @@ export const Home = () => {
     <div className="home-container">
 	<section className="home-page">
       <nav className="navbar">
-        {/* <a href="/"><img className="logo" src={archit} alt="Logo" /></a> */}
+        <a href="/" className="logo">ARCHIT</a>
 			<div className="navbar-bars">
 			</div>
 				<div className="navbar-menu">
           			<a href="/about" className="nav-links">About</a>
           			<a href="/contact" className="nav-links">Contact</a>
 					<a href="/" className="nav-links" id="city-btn">City</a>
+					<div className="nav-divider"></div>
 				</div>
   		</nav>
 			<div className="body">
@@ -28,15 +29,15 @@ export const Home = () => {
 				<div className="sub-columns">
 				<div className="column-text">
 					<h2 className="sub-head">Explore</h2>
-					<p>Find out where the architecture is located by launching the map.</p>
+					<p className="sub-text">By launching the map find out where the most unique architecture is.</p>
 				</div>
 				<div className="column-text">
 					<h2 className="sub-head">Architecture</h2>
-					<p>Know the chronology of styles which backbone the city’s culture.</p>
+					<p className="sub-text">Know the chronology of styles which backbone the city’s culture.</p>
 				</div>
 				<div className="column-text">
 					<h2 className="sub-head">History</h2>
-					<p>Learn something behind what accompanies each style and structure.</p>
+					<p className="sub-text">Learn something behind what accompanies each style and structure.</p>
 				</div>
 				</div>
 			</div>

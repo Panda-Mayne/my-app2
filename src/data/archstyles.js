@@ -8,7 +8,7 @@ const archStyles = [
     styleName: "Romanesque",
     timeFrame: "11th - mid-12th century",
     image: "/images/archstyles/romanesque.jpg",
-    description: "A fusion of Roman, Carolingian and Ottonian, Byzantine, and local Germanic traditions, it was a product of the great expansion of monasticism in the 10th–11th century.",
+    description: "During the revival of Latin  amongst germanic leaders in medieval Europe, Romanesque was the first heavily influencial architecture after the collapse of ancient Rome. The style is considered to be the link between the ancient to the medieval world. It is the eldest stone architecture in Prague with structures still standing today; dating mostly between the 11-12th century.",
     placesArray: [...romanesque],
   },
   {
