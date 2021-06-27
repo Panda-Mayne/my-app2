@@ -5,16 +5,18 @@ import {
   InfoWindow,
   Marker,
 } from "@react-google-maps/api";
+import "./Map.scss";
 // import OutsideClickHandler from 'react-outside-click-handler';
 // import { MAP_SETTINGS } from './mapConstants';
 // import mapStyles from './mapStyles.json';
 // import archStyles from "../../data/styles/archstyles";
 
+import mapStyles from "./mapStyles";
+
 
 const libraries = ["places"];
 const mapContainerStyle = {
-  width: "100vw",
-  height: "100vh",
+    height: "100vh",
 };
 const center = {
   lat: 50.0871,
@@ -23,23 +25,27 @@ const center = {
 
 export default function Map(props) {
   const { isLoaded, loadError } = useLoadScript({
-    googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAPS_API_KEY,
+    googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAPS_API_KEY, mapIds: ["468d7e38db822065"], 
     libraries,
   });
   const mapRef = useRef();
   const onMapLoad = useCallback((map) => {
     mapRef.current = map;
   }, []);
+  const options = {
+    styles: mapStyles,
+  }
 
   if (loadError) return "Error loading maps";
   if (!isLoaded) return "Loading Maps";
     return (
-    <div>
+    <div className="mapWrapper">
       <GoogleMap
         mapContainerStyle={mapContainerStyle}
         zoom={14}
         center={center}
         onLoad={onMapLoad}
+        options={options}
       >
         {props.archStyles.map(archStyle => (
         <div>

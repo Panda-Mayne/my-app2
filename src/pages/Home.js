@@ -1,31 +1,59 @@
 import React from 'react';
-import { faBars } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./Home.scss";
 // import archit from "../images/architlogo2.png";
 
 export const Home = () => {
   return ( 
-    <div className="home">
+    <div className="home-container">
+	<section className="home-page">
       <nav className="navbar">
-        {/* <a href="/"><img className="logo" src={archit} alt="Logo" /></a> */}
+        <a href="/" className="logo">ARCHIT</a>
 			<div className="navbar-bars">
-				<FontAwesomeIcon icon={faBars} />
 			</div>
 				<div className="navbar-menu">
           			<a href="/about" className="nav-links">About</a>
           			<a href="/contact" className="nav-links">Contact</a>
 					<a href="/" className="nav-links" id="city-btn">City</a>
+					<div className="nav-divider"></div>
 				</div>
   		</nav>
 			<div className="body">
-				<div className="container-home">
-        		<h1 className="h1">DISCOVER YOUR CITY'S ARCHITECTURE</h1>
+				<div className="container-title">
+        		<h1 className="main-title">Discover Prague's Architecture</h1>
          		<div className="launch">
             		<button className="launch-btn"><a href="/Map">Launch Map</a></button>
         		</div>
 				</div>
 			</div>
+			<div className="about-container">
+				<div className="sub-columns">
+				<div className="column-text">
+					<h2 className="sub-head">Explore</h2>
+					<p className="sub-text">By launching the map find out where the most unique architecture is.</p>
+				</div>
+				<div className="column-text">
+					<h2 className="sub-head">Architecture</h2>
+					<p className="sub-text">Know the chronology of styles which backbone the city’s culture.</p>
+				</div>
+				<div className="column-text">
+					<h2 className="sub-head">History</h2>
+					<p className="sub-text">Learn something behind what accompanies each style and structure.</p>
+				</div>
+				</div>
+			</div>
+			</section>
+			<section className="contact-container">
+			<div className="contact-page">
+				<div>
+					<h2>ARCHIT</h2>
+					<p>If you wish to get in touch regarding updates on historical information or architecture feel free to connect by email or social media.</p>
+					<div>
+					<a href="mailto:amandacmayne@gmail.com" target="_blank" rel="noreferrer">info@archit.eu</a>
+					</div>
+					<div className="v-line"></div>
+				</div>
+			</div>
+			</section>
         </div>
      );
 }

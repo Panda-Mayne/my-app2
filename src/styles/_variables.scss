@@ -1,3 +1,35 @@
-$fontSize : 1.125rem; 
-$textColor : #191919;
-$primaryBtn : #09aeae;
+// Sidebar fonts
+$fontSizeStyles: 16px; 
+$fontSizeContent: 16px;
+$fontSizeIcon: 14px; 
+$fontSizeBtn: 14px;
+$fontSizeHead: 18px;
+
+$textColorContent: #fafafa;
+$textColorTitle: #fafafa;
+$textColorIcon: #616161;
+$textColorBtn: #1f1f1f;
+// contact text color
+$textColorContact: #eeeeee;
+$textColorLinks: #757575; 
+
+
+$primaryBtn: #74C6FC;
+$hoverBtn: #B8E3FF;
+$markerIcon: #18A0FB;
+$hoverMarker: #53BBFF; 
+$bgColor: #141414;
+$StyleBtnHover: #333333;
+$lineColor: #222224;
+$lightColor: #fafafa;
+$primaryColor: #141414;
+$secondaryColor: #74C6FC;
+
+$fontTitle: 'Chronicle Display', sans-serif;
+$fontContact: 'Roboto', sans-serif;
+$fontBody: 'Montserrat', sans-serif;
+
+$borderRadius: 10px;
+$borderRadiusBtn: 10px;
+$dropShadow: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.25));
+
