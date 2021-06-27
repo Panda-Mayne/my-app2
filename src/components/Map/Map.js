@@ -11,6 +11,8 @@ import "./Map.scss";
 // import mapStyles from './mapStyles.json';
 // import archStyles from "../../data/styles/archstyles";
 
+import mapStyles from "./mapStyles";
+
 
 const libraries = ["places"];
 const mapContainerStyle = {
@@ -30,6 +32,9 @@ export default function Map(props) {
   const onMapLoad = useCallback((map) => {
     mapRef.current = map;
   }, []);
+  const options = {
+    styles: mapStyles,
+  }
 
   if (loadError) return "Error loading maps";
   if (!isLoaded) return "Loading Maps";
@@ -40,6 +45,7 @@ export default function Map(props) {
         zoom={14}
         center={center}
         onLoad={onMapLoad}
+        options={options}
       >
         {props.archStyles.map(archStyle => (
         <div>

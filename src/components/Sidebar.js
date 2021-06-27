@@ -8,12 +8,12 @@ export const Sidebar = ({ archStyles, setCurrentStyle, selectedLocation }) => {
  if(selectedLocation) {
    return (
      <div className="sidebar">
-       <h1 className="header">ARCHIT</h1>
+       <img className="single-location-img" src={singleLocation[0].image} alt={singleLocation[0].image} />
        <h2>{singleLocation[0].placeName}</h2>
-       <h3>{singleLocation[0].style}</h3>
+       <p>{singleLocation[0].style}</p>
        <p>{singleLocation[0].address}</p>
        <p>{singleLocation[0].erected}</p>
-       <p>{singleLocation[0].description}</p>
+       <p className="style_description">{singleLocation[0].description}</p>
      </div>
    )
  }
