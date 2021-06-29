@@ -8,7 +8,7 @@ import archStyles from "../data/archstyles";
 export const MapPage = () => {
   const [currentStyle, setCurrentStyle] = useState(undefined);
   const [filteredArchStyles, setFilteredArchStyles] = useState(archStyles);
-  const [ selected, setSelected ] = useState(null);
+  const [selected, setSelected] = useState(null);
 
   useEffect(() => {
     if (currentStyle !== undefined) {
@@ -27,10 +27,11 @@ export const MapPage = () => {
         setCurrentStyle={setCurrentStyle}
         selectedLocation={selected}
       />
-      <Map 
+      <Map
         archStyles={filteredArchStyles}
         selected={selected}
-        setSelected={setSelected} />
+        setSelected={setSelected}
+      />
     </div>
   );
 };

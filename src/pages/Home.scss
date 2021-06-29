@@ -1,44 +1,43 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bentham&family=Roboto:wght@100&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bentham&family=Montserrat:wght@700&family=Roboto:wght@100&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bentham&family=Montserrat:wght@700&family=Roboto:wght@100&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bentham&family=Roboto:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bentham&family=Montserrat:wght@700&family=Roboto:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bentham&family=Montserrat:wght@700&family=Roboto:wght@100&display=swap");
 
 @font-face {
-	font-family: 'ChronicleDisplaySemibold';
-	src: local('ChronicleDisplaySemibold'),
-		url('../styles/fonts/ChronicleDisplaySemibold.otf');
+  font-family: "ChronicleDisplayRoman";
+  src: local("ChronicleDisplayRoman"),
+    url("../styles/fonts/ChronicleDisplayRoman.otf");
 }
-
 
 $lightColor: #fafafa;
 $primaryColor: #141414;
-$secondaryColor: #74C6FC;
+$secondaryColor: #74c6fc;
 
 // buttons
-$primaryBtn: #74C6FC;
-$hoverBtn: #B8E3FF;
+$primaryBtn: #74c6fc;
+$hoverBtn: #b8e3ff;
 
 // fonts
-$fontContact: 'Roboto', sans-serif;
-$fontBody: 'Montserrat', sans-serif;
+$fontContact: "Roboto", sans-serif;
+$fontBody: "Montserrat", sans-serif;
 
 %display-content {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 %align-center {
-	display: flex;
-	align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 html {
-	box-sizing: border-box;
+  box-sizing: border-box;
 
-	&::-webkit-scrollbar {
-		display: none;
-	}
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 *,
@@ -50,181 +49,188 @@ html {
 }
 
 .home-page {
-	width: 100%;
-	height: 100vh;
+  width: 100%;
+  height: 100vh;
 }
 
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    padding: 0.2rem calc((100vw - 1200px) / 2);
-    z-index: 1;
-	border-bottom: 1px solid rgba(250, 250, 250, 0.3);
-	position: absolute;
-	top: 0;
-	width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.2rem calc((100vw - 1200px) / 2);
+  z-index: 1;
+  border-bottom: 1px solid rgba(250, 250, 250, 0.3);
+  position: absolute;
+  top: 0;
+  width: 100%;
 
-	.logo {
-		@extend %align-center;
-		text-align: center;
-		font-weight: bolder;
-		font-family: $fontContact;
-		text-decoration: none;
-		font-size: 24px;
-		color: #fafafa;
-	}
-    
-    .navbar-bars {
-        opacity: 0;
+  .logo {
+    @extend %align-center;
+    text-align: center;
+    font-weight: bolder;
+    font-family: $fontContact;
+    text-decoration: none;
+    font-size: 24px;
+    color: #fafafa;
+  }
+
+  .navbar-bars {
+    opacity: 0;
+  }
+
+  .navbar-menu {
+    @extend %align-center;
+    list-style: none;
+    text-align: center;
+    margin-right: 20px;
+
+    .nav-links {
+      color: rgba(250, 250, 250, 0.76);
+      @extend %align-center;
+      justify-content: center;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: 100;
+      padding: 0.7rem 1.8rem;
+      font-family: $fontContact;
+
+      &:hover {
+        color: #eeeeee;
+        transition: all 0.5s ease;
+      }
     }
-
-	.navbar-menu {
-		@extend %align-center;
-		list-style: none;
-		text-align: center;
-		margin-right: 20px;
-		
-		.nav-links {
-			color:  rgba(250, 250, 250, 0.76);
-			@extend %align-center;
-			justify-content: center;
-			text-decoration: none;
-			font-size: 18px;
-			font-weight: 100;
-			padding: 0.7rem 1.8rem;
-			font-family: $fontContact;
-
-			&:hover {
-				color: #eeeeee;
-				transition: all 0.5s ease;
-			}
-		}
-
-	}
+  }
 }
 
-
 .body {
-	background: linear-gradient(180deg, #000000 -4.94%, #000000 -2.2%, rgba(0, 0, 0, 0) 100%), 
-				url(../images/praguebackground1366px.jpg);
-	background-repeat: no-repeat;
-	background-size: cover;
-	margin: 0 auto;
-	position: absolute;
-	height: 100%;
-	width: 100%;
+  background: linear-gradient(
+      180deg,
+      #000000 -4.94%,
+      #000000 -2.2%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    url(../images/praguebackground1366px.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0 auto;
+  position: absolute;
+  height: 100%;
+  width: 100%;
 
-	.container-title {
-		margin: 12%;
-	}
+  .container-title {
+    margin-top: 220px;
+  }
 
-	.main-title {
-		@extend %display-content;
-		align-items: center;
-		font-family: 'ChronicleDisplaySemibold';
-		font-size: 60px;
-		color: $lightColor;
-		z-index: 1;
-	}
-	
-	.launch {
-    	@extend %display-content;
-		margin-top: 8%;
-	}
+  .main-title {
+    @extend %display-content;
+    align-items: center;
+    font-family: "ChronicleDisplayRoman";
+    font-size: 60px;
+    color: $lightColor;
+    z-index: 1;
+    font-weight: 500;
+  }
 
-	.launch-btn {
-		padding: 12px 80px;
-		border: none;
-		outline: none;
-		border-radius: 10px;
-		background: $primaryBtn;
-		cursor: pointer;
-		box-shadow: 4px 4px 20px #121212;
-		position: relative;
-		font-weight: bolder;
-		transition: all 0.3s;
-		z-index: 1;
-	}
+  .launch {
+    @extend %display-content;
+    margin-top: 8%;
+  }
 
-	.launch-btn a {
-		position: relative;
-		font-size: 18px;
-		color: #141414;
-		z-index: 2;
-		text-decoration: none;
-	}
+  .launch-btn {
+    padding: 12px 80px;
+    border: none;
+    outline: none;
+    background: $primaryBtn;
+    cursor: pointer;
+    box-shadow: 4px 4px 20px #121212;
+    position: relative;
+    font-weight: bolder;
+    transition: all 0.3s;
+    z-index: 1;
+  }
 
-	.launch-btn:after {
-		position: absolute;
-		content: '';
-		top: 0;
-		left: 0;
-		width: 0;
-		height: 100%;
-		background: $hoverBtn;
-		transition: all 0.3s;
-		border-radius: 10px;
-	}
+  .launch-btn a {
+    position: relative;
+    font-size: 18px;
+    color: #141414;
+    z-index: 2;
+    text-decoration: none;
+  }
 
-	.launch-btn:hover:after {
-		width: 100%; 
-	}
+  .launch-btn:after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: $hoverBtn;
+    transition: all 0.3s;
+  }
+
+  .launch-btn:hover:after {
+    width: 100%;
+  }
 }
 
 .about-container {
-	display: flex;
-	flex-wrap: wrap;
-	width: 100%;
-	bottom: 0;
-	border-bottom: 1px solid $primaryColor;
-	position: absolute;
-	height: 30vh;
-	background: rgba(0, 0, 0, 0.7);
-	-webkit-backdrop-filter: blur(15px);
-	backdrop-filter: blur(15px);
-	z-index: 10;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  bottom: 0;
+  border-bottom: 1px solid $primaryColor;
+  position: absolute;
+  height: 30vh;
+  background: rgba(0, 0, 0, 0.7);
+  -webkit-backdrop-filter: blur(15px);
+  backdrop-filter: blur(15px);
+  z-index: 10;
 
-	.sub-columns {
-		display: flex;
-		color:rgba(250, 250, 250, 0.76);
-		text-align: center;
-		font-weight: thin;
-		font-family: $fontBody;
-		flex-direction: row;
-		justify-content: space-evenly;
-		align-items: center;
-	}
+  .sub-columns {
+    display: flex;
+    color: rgba(250, 250, 250, 0.76);
+    text-align: center;
+    font-weight: thin;
+    font-family: $fontBody;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
 
-	.sub-columns>* {
-		flex: 0 0 200px;
-	}
+  .sub-columns > * {
+    flex: 0 0 200px;
+  }
 
-	.sub-head {
-		font-family: 'ChronicleDisplaySemibold';
-		font-size: 32px;
-		line-height: 3.5rem;
-	}
+  .sub-head {
+    font-family: "ChronicleDisplayRoman";
+    font-size: 3px;
+    line-height: 3.5rem;
+    font-weight: 500;
+  }
 
-	.sub-text {
-		font-size: 14px;
-		word-spacing: 1.4px;
-	}
+  .sub-text {
+    font-size: 14px;
+    word-spacing: 1.4px;
+    line-height: 160%;
+  }
 
+  .home-img {
+    margin-bottom: 12px;
+  }
 }
 
 .contact-container {
-	position: relative;
-	width: 100%;
-	height: 70vh;
-	background: $primaryColor;
+  position: relative;
+  width: 100%;
+  height: 70vh;
+  background: $primaryColor;
 
-	.v-line {
-		border-left: 1px solid  rgba(250, 250, 250, 0.3);
-		// position: absolute;
-		height: 300px;
-		margin-left: -3px;
-		left: 50%;
-  		top: 0;
-		z-index: 1;
-	}
+  .v-line {
+    border-left: 1px solid rgba(250, 250, 250, 0.3);
+    // position: absolute;
+    height: 300px;
+    margin-left: -3px;
+    left: 50%;
+    top: 0;
+    z-index: 1;
+  }
 }
